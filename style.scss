@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+
+$font_style: 'Lily Script One', system-ui;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: $font_style;
+    cursor: url('./images/mickey_cursor.cur'), auto;
+
+    header {
+        nav {
+            ul {
+                display: flex;
+                font-size: 1.5em;
+                padding: 15px;
+                justify-content: space-around;
+                list-style: none; /* Remove os marcadores das listas */
+                
+                li {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    
+    main {
+        background-color: white;
+
+        .section_hero {
+            width: 100%;
+            
+            .banner_img {
+                width: 100%;
+                height: 50vh;
+                object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+            }
+        }
+    
+        .section_cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Define 3 colunas de largura igual */
+            gap: 20px; /* Espaçamento entre os cards */
+            justify-content: center; /* Centraliza o grid no contêiner */
+            padding: 25px;
+            max-width: 1200px; /* Define uma largura máxima para o grid */
+            margin: 0 auto; /* Centraliza o grid horizontalmente */
+            
+            .card {
+                border-radius: 35px;
+                height: 40vh;
+                width: 85%;
+                border: 4px solid rgb(0, 0, 0);
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        gap: 20px;
+
+        .icon {
+            width: 2rem; /* Define o tamanho dos ícones */
+        }
+    }   
+}
